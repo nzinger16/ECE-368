@@ -1,0 +1,41 @@
+#include "sorting.h"
+#include <string.h>
+
+long *Load_File(char *Filename, int *Size)
+{
+  printf("got into function!");
+  long *array = NULL;
+  FILE * fptr = fopen(Filename, "r");
+  *Size = fgetc(fptr);
+  printf("size = %d", *Size);
+  int num_chars = 20;
+  char str[num_chars];
+  fgetc(fptr);
+  long val;
+  int i = 0;
+  while (fgets(str,num_chars,fptr))
+  {
+    val = strtol(str,NULL,10);
+    array[i] = val;
+    i++;
+  }
+  fclose(fptr);
+  return array;
+}    
+    
+int Save_File(char *Filename, long *Array, int Size)   
+{
+  Size = 5;
+  return Size;
+}
+
+void Shell_Insertion_Sort(long *Array, int Size, double *N_Comp, double *N_Move)
+{
+  
+}
+
+
+void Improved_Bubble_Sort(long *Array, int Size, double *N_Comp, double *N_Move)
+{
+  
+}
