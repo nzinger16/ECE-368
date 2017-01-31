@@ -1,1 +1,1 @@
-# ECE-368
+# ECE-368 Projects
